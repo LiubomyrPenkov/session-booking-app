@@ -1,0 +1,15 @@
+@if (sessionData()) {
+  <div
+    class="session-booking"
+    [class.session-booking--date-selected]="selectedDate()"
+  >
+    <app-session-details></app-session-details>
+    <div class="session-content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+} @else {
+  <div class="session-booking__loading">
+    <app-loading-spinner size="large"></app-loading-spinner>
+  </div>
+}

@@ -1,0 +1,33 @@
+@use 'scss/mixins' as *;
+
+.app-header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  height: var(--header-height);
+  padding: 0 var(--spacing-lg);
+  background-color: var(--color-background-secondary);
+  border-bottom: 1px solid var(--color-border-lightest);
+  column-gap: var(--spacing-2xl);
+
+  &__title {
+    @include typography-heading-2xl;
+
+    font-weight: var(--font-weight-semibold);
+    line-height: 135%;
+    color: var(--color-text-primary);
+  }
+
+  &__logo {
+    width: auto;
+    height: 28px;
+  }
+
+  @media screen and (width >= 960px) {
+    padding: 0 var(--spacing-2xl);
+
+    &__logo {
+      height: 36px;
+    }
+  }
+}

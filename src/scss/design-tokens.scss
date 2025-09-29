@@ -1,0 +1,78 @@
+/* === FIGMA DESIGN TOKENS === */
+
+/* Extracted from Figma dev mode - Single source of truth */
+
+:root {
+  /* === COLORS === */
+
+  /* Brand Colors */
+  --color-primary: #380e4d;
+  --color-primary-10: rgb(54 24 94 / 10%);
+  --color-primary-50: #f5f4ff;
+  --color-primary-600: #2a0a38;
+
+  /* Background Colors */
+  --color-background-primary: #fafaf9;
+  --color-background-secondary: #fff;
+  --color-background-tertiary: #fbfbfb;
+  --color-background-selected: #f4f4f5;
+  --color-background-gray: #efefef;
+  --color-background-dark: #380e4d;
+  --color-background-black: #000;
+
+  /* Text Colors */
+  --color-text-primary: #000;
+  --color-text-secondary: #505050;
+  --color-text-tertiary: #7d7d7d;
+  --color-text-muted: #979797;
+  --color-text-white: #fff;
+
+  /* Brand Text Variants */
+  --color-text-brand: #220936;
+  --color-text-brand-alt: #380e4d;
+
+  /* Border Colors */
+  --color-border-lightest: #f2f2f2;
+  --color-border-light: #e5e5e5;
+  --color-border-medium: #e2e3eb;
+  --color-border-dark: #dee0e8;
+
+  /* === TYPOGRAPHY === */
+  --font-family-primary: 'Inter', sans-serif;
+
+  /* Font Sizes */
+  --font-size-xs: 7.778px;
+  --font-size-sm: 10px;
+  --font-size-base: 12px;
+  --font-size-md: 13px;
+  --font-size-lg: 14px;
+  --font-size-xl: 15px;
+  --font-size-2xl: 17px;
+  --font-size-3xl: 21px;
+
+  /* Font Weights */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* === SPACING === */
+  --spacing-xxs: 4px;
+  --spacing-xs: 6px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 16px;
+  --spacing-xl: 20px;
+  --spacing-2xl: 24px;
+  --spacing-3xl: 32px;
+  --spacing-4xl: 40px;
+  --spacing-5xl: 48px;
+  --spacing-6xl: 64px;
+
+  /* === SHADOWS === */
+  --box-shadow:
+    0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -2px rgb(0 0 0 / 10%);
+
+  /* Component Heights */
+  --header-height: 64px;
+}

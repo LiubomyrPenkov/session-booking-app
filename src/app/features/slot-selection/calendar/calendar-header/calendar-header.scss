@@ -1,0 +1,32 @@
+@use 'scss/mixins' as *;
+
+.calendar-header {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  align-items: center;
+  column-gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+
+  &__icon {
+    width: auto;
+    height: 16px;
+    cursor: pointer;
+
+    &--next {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__period {
+    @include typography-body-base;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 24px;
+    padding: 0 var(--spacing-lg);
+    background: var(--color-background-gray);
+    border-radius: 100px;
+  }
+}

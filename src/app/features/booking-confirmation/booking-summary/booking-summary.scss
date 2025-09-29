@@ -1,0 +1,66 @@
+@use 'scss/mixins' as *;
+
+.booking-summary {
+  display: grid;
+  grid-template-areas:
+    'date'
+    'time'
+    '.'
+    'user-name'
+    'user-email';
+  column-gap: var(--spacing-sm);
+
+  &__date {
+    @include typography-body-xl;
+
+    grid-area: date;
+    line-height: 150%;
+  }
+
+  &__time {
+    @include typography-body-xl;
+
+    grid-area: time;
+    line-height: 150%;
+  }
+
+  &__timezone-full {
+    @include typography-body-base;
+
+    display: none;
+    grid-area: timezone-full;
+    line-height: 150%;
+  }
+
+  &__user-name {
+    @include typography-body-xl;
+
+    grid-area: user-name;
+    margin-top: var(--spacing-lg);
+    line-height: 150%;
+  }
+
+  &__user-email {
+    @include typography-body-xl;
+
+    grid-area: user-email;
+    font-weight: var(--font-weight-normal);
+    line-height: 150%;
+  }
+
+  @media screen and (width >= 960px) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      'date user-name'
+      'time user-email'
+      'timezone-full .';
+
+    &__timezone-full {
+      display: block;
+    }
+
+    &__user-name {
+      margin-top: 0;
+    }
+  }
+}

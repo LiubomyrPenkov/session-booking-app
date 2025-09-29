@@ -1,0 +1,35 @@
+.session-booking {
+  display: grid;
+  height: 100%;
+
+  &--date-selected {
+    app-session-details {
+      display: none;
+    }
+  }
+
+  &__loading {
+    display: grid;
+    height: 200px;
+    place-items: center;
+  }
+
+  @media screen and (width >= 960px) {
+    grid-template-columns: minmax(0, 280px) minmax(0, 1fr);
+    height: 576px;
+
+    &--date-selected {
+      app-session-details {
+        display: block;
+      }
+    }
+
+    &__loading {
+      height: 576px;
+    }
+  }
+}
+
+.session-content {
+  overflow: hidden;
+}

@@ -1,0 +1,33 @@
+<div class="booking-confirmation">
+  <h2 class="booking-confirmation__title">Confirm booking</h2>
+
+  <app-booking-summary
+    [selectedDate]="selectedDate()"
+    [selectedTime]="selectedTime()"
+    [sessionData]="sessionData()"
+  />
+
+  <p class="booking-confirmation__notice">
+    We will send you a confirmation email with the session details and meeting
+    link.
+  </p>
+
+  <div class="actions">
+    <button class="actions__btn actions__btn--back" (click)="onGoBack()">
+      Back
+    </button>
+    <button
+      class="actions__btn actions__btn--confirm"
+      (click)="onConfirmBooking()"
+    >
+      Confirm
+    </button>
+  </div>
+
+  <div class="booking-confirmation__disclaimer">
+    <span
+      >If this is not your data or you are not working with this coach, please
+      close the page</span
+    >
+  </div>
+</div>

@@ -1,0 +1,67 @@
+@use 'scss/mixins' as *;
+
+.booking-confirmation {
+  display: grid;
+  align-content: start;
+  height: 100%;
+  padding: var(--spacing-2xl) var(--spacing-lg);
+  background-color: var(--color-background-secondary);
+  row-gap: var(--spacing-md);
+
+  &__title {
+    @include typography-heading-3xl;
+
+    font-weight: var(--font-weight-semibold);
+    line-height: 125%;
+  }
+
+  &__notice {
+    @include typography-body-base;
+
+    line-height: 125%;
+    color: var(--color-text-secondary);
+  }
+
+  &__disclaimer {
+    @include typography-body-base;
+
+    line-height: 125%;
+    text-align: center;
+    color: #505050;
+  }
+
+  @media screen and (width >= 960px) {
+    padding: var(--spacing-4xl);
+
+    &__disclaimer {
+      display: none;
+    }
+  }
+}
+
+.actions {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  margin-top: var(--spacing-xl);
+  padding-bottom: var(--spacing-3xl);
+  border-bottom: 1px solid rgb(0 0 0 / 12%);
+
+  &__btn {
+    &--confirm {
+      @include button-primary;
+
+      max-width: 132px;
+    }
+
+    &--back {
+      @include button-secondary;
+
+      max-width: 84px;
+    }
+  }
+
+  @media screen and (width >= 960px) {
+    border: none;
+  }
+}

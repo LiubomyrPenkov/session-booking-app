@@ -1,0 +1,33 @@
+// Use design tokens and mixins
+@use 'scss/design-tokens' as *;
+@use 'scss/mixins' as *;
+@use 'scss/calendar-material-overrides.scss' as *;
+
+html {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-base);
+  color: var(--color-text-primary);
+  background-color: var(--color-background-secondary);
+
+  @media screen and (width >= 960px) {
+    background-color: var(--color-background-primary);
+  }
+}
+
+// Reset and base styles
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}

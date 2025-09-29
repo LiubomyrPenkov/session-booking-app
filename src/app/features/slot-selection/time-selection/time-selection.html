@@ -1,0 +1,36 @@
+<div class="time-selection">
+  <div class="time-selection__header">
+    <mat-icon
+      class="time-selection__icon"
+      svgIcon="arrow"
+      (click)="onIconClick()"
+    ></mat-icon>
+    <span class="time-selection__date">{{
+      selectedDate() | formatSelectedDate
+    }}</span>
+  </div>
+
+  <div class="time-selection__timezone">
+    <p class="time-selection__timezone-label">Time Zone</p>
+    <p class="time-selection__timezone-value">
+      {{ sessionData()?.user.timeZone | formatTimezone: 'long' }} ({{
+        currentTime()
+      }})
+    </p>
+  </div>
+
+  <div class="time-selection__content">
+    <p class="time-selection__title">Select time:</p>
+    <div class="time-selection__slots">
+      @for (time of availableTimeSlots(); track time) {
+        <button
+          type="button"
+          class="time-selection__slot"
+          (click)="onTimeSelected(time)"
+        >
+          {{ time | formatTime }}
+        </button>
+      }
+    </div>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<div
+  class="date-time-selector"
+  [class.date-time-selector--date-selected]="selectedDate()"
+>
+  <app-calendar
+    class="date-time-selector__calendar"
+    [availabilityData]="availabilityData()"
+    [selectedDate]="selectedDate()"
+    [sessionData]="sessionData()"
+    (dateSelected)="onDateSelected($event)"
+  />
+
+  @if (selectedDate()) {
+    <app-time-selection
+      class="date-time-selector__time-selection"
+      [selectedDate]="selectedDate()"
+      [selectedTime]="selectedTime()"
+      [availableTimeSlots]="availableTimeSlots()"
+      [sessionData]="sessionData()"
+      (timeSelected)="onTimeSelected($event)"
+      (backButtonClicked)="onBackButtonClicked()"
+    />
+  }
+</div>

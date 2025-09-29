@@ -1,0 +1,57 @@
+@use 'scss/mixins' as *;
+
+:host {
+  display: block;
+  height: 636px;
+  background-color: var(--color-background-secondary);
+}
+
+.completion {
+  height: 100%;
+  max-width: 880px;
+  margin: 0 auto var(--spacing-4xl);
+  padding: var(--spacing-4xl) var(--spacing-lg);
+
+  &__content {
+    display: grid;
+    padding-bottom: var(--spacing-2xl);
+    border-bottom: 1px solid var(--color-border-light);
+    justify-items: center;
+  }
+
+  &__icon {
+    width: 64px;
+    height: 64px;
+  }
+
+  &__title {
+    margin: var(--spacing-sm) 0 var(--spacing-2xl);
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-semibold);
+    line-height: 125%;
+  }
+
+  &__cta {
+    display: grid;
+    justify-items: center;
+    row-gap: var(--spacing-2xl);
+    padding-top: var(--spacing-2xl);
+  }
+
+  &__cta-text {
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-semibold);
+    line-height: 125%;
+    text-align: center;
+  }
+
+  &__cta-button {
+    @include button-secondary;
+
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+}

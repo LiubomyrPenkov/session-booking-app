@@ -1,0 +1,28 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (width >= 960px) {
+    padding: var(--spacing-4xl) 0;
+    background-color: var(--color-background-primary);
+  }
+}
+
+.app-container {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  width: 100%;
+
+  @media screen and (width >= 960px) {
+    max-width: 960px;
+    border: 1px solid var(--color-border-light);
+    border-radius: 12px;
+    overflow: hidden;
+    box-sizing: content-box;
+  }
+}
+
+.main-content {
+  overflow: hidden;
+}

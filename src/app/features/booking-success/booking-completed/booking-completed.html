@@ -1,0 +1,23 @@
+<div class="completion">
+  <div class="completion__content">
+    <mat-icon class="completion__icon" svgIcon="check_circle"></mat-icon>
+    <h3 class="completion__title">Booking Successful</h3>
+
+    <app-host-profile
+      [host]="sessionData()?.host"
+      layout="vertical"
+      class="completion__host-profile"
+    />
+  </div>
+
+  <div class="completion__cta">
+    <p class="completion__cta-text">Take your growth to the next level</p>
+    <a
+      href="https://vibly.io"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="completion__cta-button"
+      >Join Vibly</a
+    >
+  </div>
+</div>

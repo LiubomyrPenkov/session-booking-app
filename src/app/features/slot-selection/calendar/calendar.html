@@ -1,0 +1,43 @@
+<div class="session-calendar">
+  <div class="session-calendar__header">
+    <h3 class="session-calendar__title">Select date:</h3>
+    <p class="session-calendar__subtitle">
+      Select a date to see the available time slots on that day
+    </p>
+  </div>
+
+  <div class="session-calendar__content">
+    @defer (on idle) {
+      @if (availabilityData()) {
+        <mat-calendar
+          appFullGrid
+          [selected]="selectedDateObject()"
+          [dateFilter]="dateFilter"
+          [minDate]="today()"
+          [headerComponent]="customHeaderComponent"
+          (selectedChange)="onDateSelected($event)"
+          class="figma-calendar"
+        >
+        </mat-calendar>
+      } @else {
+        <ng-container *ngTemplateOutlet="loadingTemplate"></ng-container>
+      }
+    } @placeholder {
+      <ng-container *ngTemplateOutlet="loadingTemplate"></ng-container>
+    }
+  </div>
+
+  <div class="session-calendar__footer">
+    <p class="session-calendar__timezone-label">Time Zone</p>
+    <p class="session-calendar__timezone-value">
+      {{ sessionData()?.user.timeZone | formatTimezone: 'long' }}
+    </p>
+  </div>
+
+  <!-- Reusable loading template -->
+  <ng-template #loadingTemplate>
+    <div class="session-calendar__loading">
+      <app-loading-spinner size="medium"></app-loading-spinner>
+    </div>
+  </ng-template>
+</div>

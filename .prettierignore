@@ -1,0 +1,64 @@
+# Build directories
+dist/
+build/
+.angular/
+out-tsc/
+
+# Dependencies
+node_modules/
+
+# Generated files
+*.tgz
+*.tar.gz
+
+# Environment files
+.env*
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Coverage
+coverage/
+
+# Angular specific
+*.d.ts
+*.js.map
+*.d.ts.map
+
+# Angular CLI generated files
+angular.json
+.angular-cli.json
+browserslist
+
+# Test results
+karma.conf.js
+protractor.conf.js
+
+# E2E
+e2e/
+
+# Documentation
+*.md
+
+# Lock files (should not be formatted)
+package-lock.json
+yarn.lock
+
+# Configuration files that shouldn't be formatted
+tsconfig*.json
+.editorconfig
+.gitignore
+
+# Generated or vendor files
+*.min.js
+*.min.css
+vendor/

@@ -1,0 +1,17 @@
+@let user = sessionData()?.user;
+
+<div class="booking-summary">
+  <p class="booking-summary__date">{{ selectedDate() | formatSelectedDate }}</p>
+  <p class="booking-summary__time">
+    {{ selectedTime() | formatTimeRange }} ({{
+      user.timeZone | formatTimezone
+    }})
+  </p>
+  <p class="booking-summary__timezone-full">
+    {{ user.timeZone | formatTimezone: 'long' }}
+  </p>
+  <p class="booking-summary__user-name">
+    {{ user.firstName }} {{ user.lastName }}
+  </p>
+  <p class="booking-summary__user-email">{{ user.email }}</p>
+</div>

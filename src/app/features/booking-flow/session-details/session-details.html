@@ -1,0 +1,34 @@
+@let data = sessionData();
+
+<div class="session-details">
+  <app-host-profile [host]="data?.host" class="session-details__host" />
+
+  <div class="session-description">
+    <span class="session-description__type">1-1 session</span>
+    <span class="session-description__title">{{
+      data?.service?.title ?? ''
+    }}</span>
+  </div>
+
+  <div class="session-info">
+    <ng-container
+      *ngTemplateOutlet="
+        iconTextItem;
+        context: { iconName: 'clock', text: (data?.duration ?? 0) + 'min' }
+      "
+    ></ng-container>
+    <ng-container
+      *ngTemplateOutlet="
+        iconTextItem;
+        context: { iconName: 'google_meet', text: 'Google meets' }
+      "
+    ></ng-container>
+  </div>
+</div>
+
+<ng-template #iconTextItem let-iconName="iconName" let-text="text">
+  <div class="info-item">
+    <mat-icon class="info-item__icon" [svgIcon]="iconName"></mat-icon>
+    <span class="info-item__text">{{ text }}</span>
+  </div>
+</ng-template>

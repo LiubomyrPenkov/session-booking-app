@@ -1,0 +1,88 @@
+@use '@angular/material' as mat;
+
+:root {
+  @include mat.datepicker-overrides(
+    (
+      calendar-container-background-color: var(--color-background-secondary),
+      calendar-date-text-color: var(--color-text-primary),
+      calendar-text-size: var(--font-size-lg),
+      calendar-text-font: var(--font-family-primary),
+      calendar-date-selected-state-background-color: #1f2937,
+      calendar-date-selected-state-text-color: var(--color-text-white),
+      calendar-date-disabled-state-text-color: #22093640,
+      calendar-date-today-outline-color: var(--color-background-dark),
+      calendar-date-hover-state-background-color: var(--color-background-gray),
+      calendar-date-outline-color: var(--color-border-dark),
+      calendar-header-text-size: var(--font-size-base),
+      calendar-header-text-color: var(--color-text-muted),
+      calendar-header-text-weight: var(--font-weight-medium),
+      calendar-header-divider-color: var(--color-border-medium),
+    )
+  );
+}
+
+.mat-calendar {
+  max-width: 360px;
+}
+
+.mat-calendar-table {
+  border-spacing: 0 4px !important;
+  border-collapse: separate !important;
+
+  .mat-calendar-table-header {
+    th {
+      padding: var(--spacing-xxs) 0 2px;
+    }
+
+    .mat-calendar-table-header-divider {
+      &::after {
+        right: 0;
+        left: 0;
+      }
+
+      padding: 0;
+    }
+  }
+}
+
+.mat-calendar-body {
+  td {
+    height: 34px !important;
+    padding: 0 !important;
+  }
+}
+
+.mat-calendar-content {
+  padding: 0 !important;
+}
+
+.mat-calendar-body-cell {
+  height: 34px !important;
+
+  .mat-calendar-body-cell-content {
+    width: 45px !important;
+    height: 34px;
+    border-radius: 4px;
+  }
+
+  &.mat-calendar-body-disabled {
+    .mat-calendar-body-cell-content {
+      border-color: #f4f4f5;
+    }
+  }
+
+  @media screen and (width >= 960px) {
+    .mat-calendar-body-cell-content {
+      width: 48px !important;
+    }
+  }
+}
+
+.calendar-custom-empty-cell {
+  pointer-events: none;
+
+  .mat-calendar-body-cell-content {
+    background-color: #fafafa;
+    border: none;
+  }
+}

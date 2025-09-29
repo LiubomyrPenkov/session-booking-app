@@ -1,0 +1,39 @@
+.date-time-selector {
+  @media screen and (width >= 960px) {
+    display: grid;
+    grid-template-columns: minmax(0, 400px) minmax(0, 280px);
+    height: 100%;
+    overflow: hidden;
+  }
+}
+
+.date-time-selector__calendar {
+  background: #fff;
+  border-right: 1px solid #e5e7eb;
+
+  .date-time-selector--date-selected & {
+    display: none;
+
+    @media screen and (width >= 960px) {
+      display: block;
+    }
+  }
+}
+
+.date-time-selector__time-selection {
+  background: #fff;
+  animation: slideInUp 0.3s ease-out;
+  overflow: hidden;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

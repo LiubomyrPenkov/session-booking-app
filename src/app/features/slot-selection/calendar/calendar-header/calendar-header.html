@@ -1,0 +1,19 @@
+<div class="calendar-header">
+  <mat-icon
+    svgIcon="vector"
+    class="calendar-header__icon calendar-header__icon--previous"
+    (click)="previousClicked()"
+  ></mat-icon>
+
+  <div class="calendar-header__period">
+    <span class="calendar-header__period-text">
+      {{ periodButtonText }}
+    </span>
+  </div>
+
+  <mat-icon
+    svgIcon="vector"
+    class="calendar-header__icon calendar-header__icon--next"
+    (click)="nextClicked()"
+  ></mat-icon>
+</div>
